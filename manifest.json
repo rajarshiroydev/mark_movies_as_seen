@@ -1,13 +1,19 @@
 {
-    "manifest_version": 3,
-    "name": "Mark Movies as Seen",
-    "description": "Mark movies as seen on the Hindi Movies 2025 Wikipedia page.",
-    "version": "1.0",
-    "permissions": ["storage"],
-    "content_scripts": [
-      {
-        "matches": ["*://*.wikipedia.org/wiki/List_of_Hindi_films_of_2025*"],
-        "js": ["content.js"]
-      }
-    ]
-  }
+  "manifest_version": 3,
+  "name": "Mark Movies as Seen",
+  "description": "Mark movies as seen on Wikipedia movie lists.",
+  "version": "1.1",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.wikipedia.org/wiki/List_of_*_films_of_*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
